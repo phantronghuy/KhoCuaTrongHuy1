@@ -1,0 +1,2 @@
+# KhoCuaTrongHuy1
+thucHanhADP

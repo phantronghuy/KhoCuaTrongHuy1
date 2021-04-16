@@ -1,0 +1,14 @@
+public static Complex quotient(Complex c1,Complex c2){
+        Complex tam= new Complex();
+        tam.re=(c1.rec2.re+c1.imc2.im)/(c1.rec1.re+c1.imc1.im);
+        tam.im=(c1.rec2.re-c1.imc2.im)/(c1.rec1.re+c1.imc1.im);
+        return tam;
+    }
+     public static Complex quotient(Complex c1,int x){
+        Complex c2 = new Complex(x);
+        return quotient(c1,c2);
+    }
+     public static Complex quotient(int x, Complex c1){
+        Complex c2 = new Complex(x);
+        return area(c1,c2);
+    }

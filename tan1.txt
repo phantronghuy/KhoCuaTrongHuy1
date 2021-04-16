@@ -1,0 +1,15 @@
+public static Complex diff(Complex c1,Complex c2) {
+        Complex s=new Complex();
+        s.re=c1.re-c2.re;
+        s.im=c1.im-c2.im;
+        return s;
+    }
+
+    public static Complex diff(Complex c1,int x){
+        Complex c2 = new Complex(x);
+        return diff(c1,c2);
+    }
+    public static Complex diff(int x,Complex c1){
+        Complex c2 = new Complex(x);
+        return diff(c1,c2);
+    }

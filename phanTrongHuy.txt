@@ -1,0 +1,98 @@
+package tesstttt;
+
+import java.util.*;
+
+class Complex{
+	double re, im;
+	Complex(){
+  		re=0;
+  		im=0;
+  	}
+	
+	Complex(double re, double im){
+  		this.re=re;
+  		this.im=im;
+  	}
+	
+	Complex(double im){
+  		this.re=0;
+  		this.im=im;
+  	}
+
+		 
+	 
+
+	public String toString(){
+		String s="";
+		if(re==0 && im==0 ) s="0";
+			if(re!=0) {
+				if(im==0) s=String.valueOf(re);
+				else s=String.valueOf(re);
+			}
+			if(im!=0){
+				if (re!=0){
+					if(im<0 && im!=-1) s+=" - "+String.valueOf(-im)+"i";
+					else if(im==1) s+=" + i";
+					else s+=" + "+ String.valueOf(im) + "i";
+				}
+				if(re==0){
+					if(im<0 && im!=-1) s+=String.valueOf(im)+"i";
+					else if(im==1) s+="i";
+					else if(im==-1) s+="-i";
+					else s+=String.valueOf(im) + "i";
+				}
+			}	
+		return s;
+	}
+
+
+} 
+
+ class Sophuc {
+	 public static Complex sum(Complex c1, Complex c2) {
+		 Complex s=new Complex();
+		 s.re=c1.re+c2.re;
+		 s.im=c1.im+c2.im;
+		 return s;
+	}
+	 
+	public static Complex sum(Complex c1,int x){
+		Complex c2=new Complex(x);
+		return sum(c1,c2);
+	}
+
+	public static Complex sum(int x,Complex c2 ){
+		 Complex c1=new Complex(x);
+		 return sum(c1,c2);
+	}
+
+
+
+	
+ 
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc =  new Scanner (System.in);
+		Complex c1, c2,t;
+		
+       //System.out.println("Nhap so phuc thu nhat: ");
+	   c1=new Complex(1,2);
+ 	   //System.out.println("Nhap so phuc thu nhat: ");
+	   c2=new Complex(3,4);
+	     
+	   System.out.println("c1: " + c1 );
+	   System.out.println("c2: " + c2 );
+	   System.out.println("c1+c2: "+  sum(c1,c2)); 
+       System.out.println("c1-c2: "+ diff(c1,c2));
+       System.out.println( "c1*c2: "+area(c1,c2));
+  	   System.out.println("c1/c2: "+quotient(c1,c2));
+
+
+
+	}
+
+	
+ 
+
+}
